@@ -1,7 +1,14 @@
 #!/usr/bin/node
+/* process.argv return the arguments
+the first argument is always node
+the second is the executable file
+the third is the first argument
 
-if (process.argv[2] === undefined) {
-  console.log('No argument');
+*/
+let x = 0;
+x = process.argv[2];
+if (x) {
+  console.log(x);
 } else {
-  console.log(process.argv[2]);
+  console.log('No argument');
 }

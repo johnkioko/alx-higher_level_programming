@@ -1,6 +1,9 @@
 #!/usr/bin/node
-
-const stmt = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (let i = 0; i < 3; i++) {
-  console.log(stmt[i]);
+const first = 'C is fun';
+const second = 'Python is cool';
+const third = 'Javascript is amazing';
+const array = [first, second, third];
+let count = 0;
+for (; count < array.length; count++) {
+  console.log(array[count]);
 }

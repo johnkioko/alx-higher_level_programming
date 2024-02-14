@@ -1,8 +1,14 @@
 #!/usr/bin/node
+/* process.argv return the arguments
+the first argument is always node
+the second is the executable file
+the third is the first argument
 
-const num = process.argv[2];
-if (isNaN(num)) {
-  console.log('Not a number');
+*/
+let x = process.argv[2];
+x = parseInt(x);
+if (x) {
+  console.log('My number: ' + x);
 } else {
-  console.log('My number: ' + num);
+  console.log('Not a number');
 }

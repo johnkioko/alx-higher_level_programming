@@ -1,4 +1,6 @@
 #!/usr/bin/node
-exports.add = function add (a, b) {
-  return (a + b);
+/* function that is going to be used in another module of JS */
+exports.add = function (a, b) {
+  const result = a + b;
+  return (result);
 };

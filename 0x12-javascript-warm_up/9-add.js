@@ -1,6 +1,10 @@
 #!/usr/bin/node
-
+/* create a adding function */
+const input1 = parseInt(process.argv[2]);
+const input2 = parseInt(process.argv[3]);
 function add (a, b) {
-  console.log(parseInt(a) + parseInt(b));
+  let result = 0;
+  result = a + b;
+  console.log(result);
 }
-add(process.argv[2], process.argv[3]);
+add(input1, input2);
