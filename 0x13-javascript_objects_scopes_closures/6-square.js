@@ -1,14 +1,15 @@
 #!/usr/bin/node
-
-const SquareZ = require('./5-square');
-
-class Square extends SquareZ {
-  charPrint (c) {
-    if (c === undefined) {
-      this.print();
-    } else {
-      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
+/* inheritance in JS */
+const Square1 = require('./5-square');
+module.exports = class Square extends Square1 {
+  charPrint (c = 'X') {
+    let row = '';
+    let count = 0;
+    for (; count < this.width; count++) {
+      row = row + c;
+    }
+    for (count = 0; count < this.height; count++) {
+      console.log(row);
     }
   }
-}
-module.exports = Square;
+};

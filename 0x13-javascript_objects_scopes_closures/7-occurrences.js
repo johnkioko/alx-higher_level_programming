@@ -1,10 +1,12 @@
 #!/usr/bin/node
+/* creating a function */
 exports.nbOccurences = function (list, searchElement) {
-  let nbOccurences = 0;
-  for (let i = 0; i < list.length; i++) {
+  const tamaño = list.length;
+  let result = 0;
+  for (let i = 0; i < tamaño; i++) {
     if (list[i] === searchElement) {
-      nbOccurences++;
+      result += 1;
     }
   }
-  return nbOccurences;
+  return (result);
 };

@@ -1,6 +1,7 @@
 #!/usr/bin/node
-let x = 0;
+/* USING SCOPE FOR GET GLOBAL VARIABLES */
+let counter = 0;
 exports.logMe = function (item) {
-  console.log(x + ': ' + item);
-  x++;
+  console.log(counter + ': ' + item);
+  counter += 1;
 };

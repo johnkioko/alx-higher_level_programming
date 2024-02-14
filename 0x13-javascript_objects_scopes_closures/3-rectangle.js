@@ -1,14 +1,25 @@
 #!/usr/bin/node
-class Rectangle {
+/* create an rectangle class in JS */
+module.exports = class Rectangle {
   constructor (w, h) {
-    if ((w > 0) && (h > 0)) {
+    if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
     }
   }
 
+  // Method
   print () {
-    for (let i = 0; i < this.height; i++) console.log('X'.repeat(this.width));
+    let row = '';
+    let count = 0;
+    // we create the first row depending of width
+    for (; count < this.width; count++) {
+      row = row + 'X';
+    }
+    count = 0;
+    // print the row created height times
+    for (; count < this.height; count++) {
+      console.log(row);
+    }
   }
-}
-module.exports = Rectangle;
+};
